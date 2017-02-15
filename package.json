@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scrape": "node downloadDocs.js"
+    "scrape": "rm -rf docs && node downloadDocs.js"
   },
   "author": "",
   "license": "ISC",

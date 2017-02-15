@@ -10,20 +10,21 @@ utils.getPages = (url, cb) => {
     if (!err) {
       var $ = cheerio.load(html);
       $('.api-menu a').each(function(i, element){
-        urls.push(`${url}${element.attribs.href}`);
+        urls.push(`${element.attribs.href}`);
       });
       cb(null, urls);
     }
   });
 }
 
-utils.downloadDocs = (opts) => {
+utils.downloadDocs = (opts, cb) => {
+  console.log(opts);
   scrape(opts, (err, result) => {
     if (err) console.log(err);
   });
 }
 
-utils.formatDirName = (urlString) => {
+utils.formatName = (urlString) => {
   return urlString.substr(urlString.indexOf("#") + 1);
 }
 
