@@ -1,0 +1,17 @@
+{
+  "name": "untappd-docs-scrape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scrape": "node downloadDocs.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.79.0",
+    "website-scraper": "^2.1.0"
+  }
+}
